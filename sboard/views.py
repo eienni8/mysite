@@ -12,7 +12,7 @@ def index(request):
     """
     question_list = Question.objects.order_by('-create_date')
     context = {'question_list' : question_list}
-    return HttpResonse("안녕하세요 sboard에 오신 것을 환영합니다.")
+    return render(request, 'sboard/question_list.html' , context)
 
 
 
